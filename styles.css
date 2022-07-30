@@ -1,9 +1,9 @@
 * {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-body {
+/* body {
   background-color: black;
-}
+} */
 nav {
   display: flex;
   align-items: center;
@@ -88,6 +88,7 @@ nav {
   text-align: center;
   opacity: 0;
   animation: cycleImage 21s infinite;
+  border: 2px solid black;
 }
 .slideshow-item:nth-child(1) {
   animation-delay: 0s;
@@ -109,7 +110,7 @@ nav {
 .slideshow-item-text {
   position: absolute;
   width: 50%;
-  top: 20%;
+  top: 25%;
   left: 0;
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
