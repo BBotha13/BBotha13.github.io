@@ -1,0 +1,244 @@
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  background-color: white;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 70px;
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  z-index: 9000;
+}
+
+.logo-image {
+  width: 200px;
+  margin: auto 50px;
+}
+
+.nav-Menu {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+
+.nav-Menu a {
+  position: relative;
+  display: flex;
+  text-decoration: none;
+  padding: 1rem 1.5rem;
+  font-size: 2rem;
+  color: white;
+  transition: 0.5s ease;
+}
+
+.nav-Menu a:hover {
+  color: blueviolet;
+}
+
+.active_nav {
+  background-color: black;
+}
+.menu {
+  display: flex;
+  justify-content: end;
+  list-style-type: none;
+}
+
+.hamburger {
+  display: none;
+  float: right;
+  cursor: pointer;
+  margin-right: 20px;
+}
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all all 0.3s ease-in-out;
+}
+
+.slideshow {
+  position: relative;
+  display: flex;
+  /* flex-direction: column; */
+  width: 100%;
+  height: 80vh;
+  padding: 0;
+  align-items: flex-start;
+  /* overflow: hidden; */
+
+  /* justify-content: center; */
+  /* height: 100vh;
+  width: 100vw;
+  border: 1px solid blue;  */
+}
+.slideshow-item {
+  position: absolute;
+  display: block;
+  width: 100vw;
+  height: inherit;
+  text-align: center;
+  opacity: 0;
+  animation: cycleImage 21s infinite;
+  border: 2px solid black;
+}
+.slideshow-item:nth-child(1) {
+  animation-delay: 0s;
+}
+.slideshow-item:nth-child(2) {
+  animation-delay: 8s;
+}
+.slideshow-item:nth-child(3) {
+  animation-delay: 15s;
+}
+
+.background-image {
+  position: absolute;
+  display: block;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  /* object-fit: cover; */
+}
+.slideshow-item-text {
+  position: absolute;
+  width: 50%;
+  bottom: 10%;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 1rem 1rem;
+}
+.slideshow-item-text h1 {
+  font-size: 5rem;
+}
+.slideshow-item-text h2 {
+  font-size: 3rem;
+}
+@keyframes cycleImage {
+  25% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+}
+
+.latest-products-heading {
+  display: block;
+  text-align: center;
+}
+.latest-products-heading h1 {
+  display: inline-block;
+  text-align: center;
+  margin: 0;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: rgb(223, 208, 208);
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.664);
+  border-bottom: 3px solid rgb(223, 208, 208);
+  box-shadow: 0px 2px rgba(0, 0, 0, 0.5);
+}
+
+.latest-images {
+  display: grid;
+  grid-template-columns: 4fr 4fr 4fr;
+  align-items: center;
+  justify-items: center;
+  margin-top: 1vh;
+}
+.img-container {
+  display: flex;
+  width: 300px;
+  height: 300px;
+  margin: 5px;
+  grid-template-columns: auto auto auto;
+  place-items: center;
+  justify-content: center;
+  background-color: rgb(240, 233, 233);
+}
+.latest-images img {
+  display: flexbox;
+  width: 200px;
+  height: auto;
+  margin: 5px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.latest-images img:hover {
+  border: 3px solid blue;
+}
+
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .menu {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    padding: 2px;
+  }
+  .nav-Menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 40px;
+    margin: 0 auto;
+    text-align: center;
+    transition: 0.3s;
+  }
+  .nav-Menu a {
+    font-size: 1.8rem;
+  }
+  .nav-Menu.active {
+    left: 0;
+  }
+  .slideshow {
+    height: 40vh;
+  }
+  .slideshow-item {
+    text-align: center;
+    /* width: 100vw; */
+  }
+  .slideshow-item-text {
+    width: 100vw;
+  }
+  .slideshow-item-text h1 {
+    font-size: 3rem;
+  }
+  .slideshow-item-text h2 {
+    font-size: 2rem;
+  }
+  .latest-images {
+    grid-template-columns: 12fr;
+  }
+  .img-container {
+    width: 400px;
+    height: 400px;
+  }
+  .latest-images img {
+    width: 300px;
+  }
+}
