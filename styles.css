@@ -156,7 +156,7 @@ nav {
 }
 .img-container {
   display: flex;
-  width: 300px;
+  width: 100%;
   height: 300px;
   margin: 5px;
   grid-template-columns: auto auto auto;
@@ -234,10 +234,10 @@ nav {
   .latest-images {
     grid-template-columns: 6fr 6fr;
   }
-  .img-container {
+  /* .img-container {
     width: 250px;
     height: 250px;
-  }
+  } */
   .latest-images img {
     width: 180px;
   }
