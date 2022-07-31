@@ -235,10 +235,10 @@ nav {
     grid-template-columns: 6fr 6fr;
   }
   .img-container {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
   }
   .latest-images img {
-    width: 150px;
+    width: 180px;
   }
 }
