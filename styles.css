@@ -428,6 +428,13 @@ a {
     text-align: center;
     font-size: 10px;
   }
+  .product-box {
+    width: 8vw;
+    min-width: 85px;
+    min-height: 213px;
+    height: 20vw;
+    margin: 10px;
+  }
   .footer p,
   a,
   h1 {
