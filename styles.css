@@ -23,15 +23,16 @@ nav {
 }
 
 .logo-image {
-  width: 200px;
+  width: 25vw;
+  max-width: 235px;
   margin: auto 50px;
 }
 .whatsapp-link {
   position: fixed;
   top: 20%;
   right: 5%;
-  height: 50px;
-  width: 50px;
+  /* height: 50px;
+  width: 50px; */
 }
 .whatsapp-icon {
   width: 50px;
@@ -228,6 +229,7 @@ nav {
   font-size: 1em;
 }
 #shop-container {
+  position: relative;
   display: flex;
   align-items: stretch;
   padding: 100px 20px 10px 20px;
@@ -235,6 +237,7 @@ nav {
   min-height: 100vh;
 }
 #category-container {
+  position: fixed;
   text-align: center;
   width: 20%;
   height: auto;
@@ -242,6 +245,9 @@ nav {
   border-radius: 15px;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.616);
   background-image: url(/images/ricepaper.png);
+}
+#category-container h4 {
+  font-size: 1.5vw;
 }
 #category-container .category-list ul {
   text-align: left;
@@ -255,13 +261,17 @@ nav {
 #category-container .category-list a {
   text-decoration: none;
   color: gray;
-  font-size: 20px;
+  font-size: 1.5vw;
 }
 #product-container {
+  position: absolute;
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
-  padding: 20px;
+  width: 80%;
+  padding: 50px;
+  margin-right: 0px;
+  left: 20%;
+  clear: both;
 }
 #product-container h3 {
   text-align: center;
@@ -270,8 +280,10 @@ nav {
 .product-box {
   position: relative;
   display: flex;
-  width: 20rem;
-  height: 35rem;
+  width: 10vw;
+  min-width: 100px;
+  min-height: 213px;
+  height: 20vw;
   margin: 10px;
   padding-top: 10px;
   text-align: center;
@@ -296,6 +308,9 @@ nav {
   border: 1px solid rgba(207, 196, 196, 0.973);
   width: 80%;
   margin: 5px auto;
+}
+.img-description p {
+  font-size: 1em;
 }
 /**************** footer******************/
 .footer {
