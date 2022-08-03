@@ -2,12 +2,13 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   box-sizing: border-box;
 }
+
 body {
   position: relative;
   /* display: flex; */
   /* flex-direction: column; */
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   background-color: white;
 }
 
@@ -29,8 +30,8 @@ nav {
 }
 .whatsapp-link {
   position: fixed;
-  top: 20%;
-  right: 5%;
+  top: 20vh;
+  right: 0%;
   /* height: 50px;
   width: 50px; */
 }
@@ -50,7 +51,7 @@ nav {
   padding: 1rem 1.5rem;
   font-size: 2rem;
   color: white;
-  transition: 0.5s ease;
+  transition: 0.3s ease;
 }
 
 .nav-Menu a:hover {
@@ -149,12 +150,12 @@ nav {
 }
 
 .latest-products-heading {
-  display: block;
-  text-align: center;
+  position: relative;
 }
 .latest-products-heading h1 {
-  display: inline-block;
+  display: flex;
   text-align: center;
+  justify-content: center;
   margin: 0;
   font-weight: bold;
   text-transform: uppercase;
@@ -172,13 +173,16 @@ nav {
   margin-top: 1vh;
   padding-bottom: 50px;
 }
+.latest-images .product-box {
+  width: 250px;
+  height: 400px;
+}
 .img-container {
   display: flex;
   width: 300px;
   height: 300px;
   margin: 5px;
   padding: 10px;
-  /* grid-template-columns: auto auto auto; */
   justify-content: center;
   background-color: rgb(240, 233, 233);
 }
@@ -190,9 +194,6 @@ nav {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-}
-.latest-images img:hover {
-  border: 3px solid blue;
 }
 
 /* about page */
@@ -217,6 +218,7 @@ nav {
 }
 .about-container h1 {
   font-size: 2em;
+  font-weight: bold;
   text-align: center;
   margin-bottom: 30px;
   padding: 0;
@@ -231,23 +233,22 @@ nav {
 #shop-container {
   position: relative;
   display: flex;
+  width: 100vw;
+  min-height: 120%;
   align-items: stretch;
-  padding: 100px 20px 10px 20px;
-  height: auto;
-  min-height: 100vh;
+  padding: 100px 20px 0px 20px;
 }
 #category-container {
-  /* position: fixed; */
+  position: absolute;
   text-align: center;
   width: 20%;
   height: auto;
-  /* border: 1px solid rgba(0, 0, 0, 0.616); */
   border-radius: 15px;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.616);
   background-image: url(/images/ricepaper.png);
 }
 #category-container h4 {
-  font-size: 2vw;
+  font-size: 1.5vw;
 }
 #category-container .category-list ul {
   text-align: left;
@@ -259,15 +260,22 @@ nav {
   padding: 4px 0;
 }
 #category-container .category-list a {
+  position: relative;
   text-decoration: none;
   color: gray;
-  font-size: 2vw;
+  font-size: 1.5vw;
+}
+#category-container .category-list a:hover {
+  color: rgba(128, 128, 128, 0.514);
+  font-weight: 600;
+  left: 5px;
 }
 #product-container {
-  position: absolute;
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   width: 80%;
+  /* min-height: 100vh; */
   padding: 50px;
   margin-right: 0px;
   left: 20%;
@@ -280,8 +288,8 @@ nav {
   position: relative;
   display: flex;
   width: 10vw;
-  min-width: 100px;
-  min-height: 213px;
+  min-width: 200px;
+  min-height: 350px;
   height: 20vw;
   margin: 10px;
   padding-top: 10px;
@@ -289,10 +297,14 @@ nav {
   align-items: flex-start;
   justify-content: center;
   border-radius: 7px;
-  /* padding-top: 10px; */
+  cursor: pointer;
   border: 1px solid rgb(216, 205, 205);
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.616);
+  box-shadow: -5px -5px 10px rgba(0, 0, 0, 0.4);
   background-image: url(/images/ricepaper.png);
+  transition: 0.3s ease;
+}
+.product-box:hover {
+  box-shadow: -6px -6px 10px rgba(0, 0, 0, 0.7);
 }
 .product-box img {
   width: 90%;
@@ -311,9 +323,15 @@ nav {
 .img-description p {
   font-size: 1em;
 }
+/**************Contact us page************/
+#contact-container {
+  padding-top: 80px;
+  /* text-align: center; */
+  min-height: 100%;
+}
 /**************** footer******************/
 .footer {
-  position: absolute;
+  position: relative;
   display: flex;
   width: 100vw;
   justify-content: space-evenly;
@@ -321,7 +339,7 @@ nav {
   padding: 2vh 0;
   bottom: 0px;
   background-color: rgb(173, 158, 158);
-  z-index: 9999;
+  /* z-index: 9999; */
 }
 
 .footer a {
@@ -387,7 +405,7 @@ a {
   .whatsapp-link {
     position: fixed;
     top: 10%;
-    right: 3%;
+    right: 12%;
     /* height: 50px;
     width: 50px; */
   }
@@ -407,14 +425,19 @@ a {
   .slideshow-item-text h2 {
     font-size: 2rem;
   }
+  /* .latest-products-heading {
+    text-align: center;
+  } */
   .latest-products-heading h1 {
     font-size: 14px;
   }
   .latest-images {
     grid-template-columns: 6fr 6fr;
   }
-  /* .front {
-  } */
+  .latest-images .product-box {
+    width: 40vw;
+    height: 40vh;
+  }
   .img-container {
     width: 150px;
     height: 180px;
@@ -449,16 +472,25 @@ a {
     font-weight: bold;
   }
   #product-container {
-    padding: 35px;
-    margin-right: 0px;
+    width: 80%;
+    /* padding-left: 10px; */
+    margin-right: 10px;
+    margin-left: 40px;
+    padding: 0px;
     left: 20%;
   }
   .product-box {
+    position: relative;
     display: flex;
-    width: 25vw;
-    min-width: 100px;
-    min-height: 213px;
-    height: 50vw;
+    /* grid-template-columns: 6fr 6fr; */
+
+    justify-items: center;
+  }
+  .product-box img {
+    position: absolute;
+    width: 95%;
+    margin-top: 5px;
+    border-radius: 7px;
   }
 
   .footer p,
