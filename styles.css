@@ -150,7 +150,8 @@ nav {
 }
 
 .latest-products-heading {
-  position: relative;
+  position: block;
+  padding: 20px;
 }
 .latest-products-heading h1 {
   display: flex;
@@ -167,15 +168,15 @@ nav {
 
 .latest-images {
   display: grid;
-  grid-template-columns: 4fr 4fr 4fr;
+  grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
   justify-items: center;
   margin-top: 1vh;
   padding-bottom: 50px;
 }
 .latest-images .product-box {
-  width: 250px;
-  height: 400px;
+  width: 20px;
+  height: 300px;
 }
 .img-container {
   display: flex;
@@ -230,22 +231,29 @@ nav {
   text-align: center;
   font-size: 1em;
 }
+
+/************* shop page*******************/
 #shop-container {
   position: relative;
   display: flex;
+  flex-direction: row;
   width: 100vw;
-  min-height: 120%;
-  align-items: stretch;
+  min-height: 100%;
+  /* align-content: space-around; */
+  justify-content: center;
   padding: 100px 20px 0px 20px;
 }
 #category-container {
-  position: absolute;
-  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 20%;
-  height: auto;
-  border-radius: 15px;
+  /* height: auto; */
+  border-radius: 5px;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.616);
   background-image: url(/images/ricepaper.png);
+  /* border: 2px solid black; */
 }
 #category-container h4 {
   font-size: 1.5vw;
@@ -275,10 +283,9 @@ nav {
   display: flex;
   flex-wrap: wrap;
   width: 80%;
-  /* min-height: 100vh; */
-  padding: 50px;
+  justify-content: space-around;
   margin-right: 0px;
-  left: 20%;
+  /* border: 2px solid black; */
 }
 #product-container h3 {
   text-align: center;
@@ -722,6 +729,21 @@ a {
     text-align: center;
     font-size: 10px;
   }
+  #shop-container {
+    flex-direction: column;
+    padding: 80px 20px 0px 20px;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  #category-container {
+    width: 50%;
+    margin-top: 10px;
+    justify-content: center;
+    z-index: 9999;
+  }
+  #category-container .category-list ul {
+    display: none;
+  }
   #category-container .category-list a {
     text-decoration: none;
     color: gray;
@@ -729,18 +751,13 @@ a {
     font-weight: bold;
   }
   #product-container {
-    width: 80%;
-    /* padding-left: 10px; */
-    margin-right: 10px;
-    margin-left: 40px;
-    padding: 0px;
-    left: 20%;
+    position: absolute;
+    width: 100%;
+    margin-top: 50px;
   }
   .product-box {
     position: relative;
     display: flex;
-    /* grid-template-columns: 6fr 6fr; */
-
     justify-items: center;
   }
   .product-box img {

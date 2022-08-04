@@ -17,3 +17,29 @@ hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");
   navMenu.classList.toggle("active");
 });
+//shop category list
+const categoryBtn = document.querySelector("#category-container");
+const isCatActive = document.querySelector(".category-list ul");
+categoryBtn.addEventListener("mouseover", () => {
+  isCatActive.style.display = "block";
+});
+categoryBtn.addEventListener("mouseout", () => {
+  isCatActive.style.display = "none";
+});
+//contact page
+const inputs = document.querySelectorAll(".input");
+
+function focusFunc() {
+  let parent = this.parentNode;
+  parent.classList.add("focus");
+}
+function blurFunc() {
+  let parent = this.parentNode;
+  if (this.value == "") {
+    parent.classList.remove("focus");
+  }
+}
+inputs.forEach((input) => {
+  input.addEventListener("focus", focusFunc);
+  input.addEventListener("blur", blurFunc);
+});
