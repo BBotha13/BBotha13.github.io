@@ -301,10 +301,9 @@ nav {
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  width: 80%;
-  justify-content: space-around;
+  width: 100%;
+  padding: 0px 100px;
   margin-right: 0px;
-  /* border: 2px solid black; */
 }
 #product-container h3 {
   text-align: center;
@@ -314,8 +313,8 @@ nav {
   position: relative;
   display: flex;
   width: 10vw;
-  min-width: 200px;
-  min-height: 350px;
+  min-width: 100px;
+  min-height: 200px;
   height: 20vw;
   margin: 10px;
   padding-top: 10px;
@@ -698,7 +697,9 @@ a {
   }
   #product-container {
     position: absolute;
+    justify-content: center;
     width: 100%;
+    padding: 5px;
     margin-top: 50px;
     z-index: 1;
   }
@@ -748,6 +749,14 @@ a {
     position: fixed;
     top: 15%;
     right: 5%;
+  }
+  #product-container {
+    position: absolute;
+    justify-content: center;
+    width: 100%;
+    padding: 5px;
+    margin-top: 50px;
+    z-index: 1;
   }
   .contact-container {
     padding: 10rem 0.5rem 1rem 1rem;
