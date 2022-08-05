@@ -593,8 +593,8 @@ a {
   }
   .whatsapp-link {
     position: fixed;
-    top: 10%;
-    right: 12%;
+    top: 15%;
+    right: 5%;
   }
   .slideshow {
     height: 40vh;
@@ -689,13 +689,24 @@ a {
     margin-top: 5px;
     border-radius: 7px;
   }
+  .contact-container {
+    padding: 10rem 2rem 1rem 1rem;
+  }
   .form {
     grid-template-columns: 1fr;
+  }
+  .footer {
+    display: block;
+    text-align: center;
+  }
+  .footer p:nth-child(even) {
+    display: none;
   }
   .footer p,
   a,
   h1 {
     font-size: 12px;
+    padding: 5px;
   }
 }
 @media (max-width: 480px) {
@@ -705,7 +716,7 @@ a {
     right: 5%;
   }
   .contact-container {
-    padding-top: 3rem;
+    padding: 10rem 3rem 1rem 1rem;
   }
 
   form,
