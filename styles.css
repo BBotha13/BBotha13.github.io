@@ -504,6 +504,11 @@ textarea.input {
 .business-map {
   text-align: center;
   margin-top: 1rem;
+  width: 100%;
+}
+.business-map iframe {
+  width: 400px;
+  height: 300px;
 }
 .icon {
   width: 28px;
@@ -721,7 +726,7 @@ a {
 
   form,
   .contact-info {
-    padding: 1.7rem 1.6rem;
+    padding: 0rem 0rem;
   }
 
   .title {
@@ -736,6 +741,13 @@ a {
 
   .icon {
     width: 23px;
+  }
+  .business-map {
+    text-align: center;
+  }
+  .business-map iframe {
+    width: 350px;
+    height: 250px;
   }
 
   .input {
