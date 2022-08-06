@@ -306,8 +306,9 @@ nav {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  padding: 0px 100px 100px 100px;
+  padding: 10px 10px 10px 10px;
   margin-right: 0px;
+  justify-content: space-around;
 }
 #product-container h3 {
   text-align: center;
@@ -317,8 +318,8 @@ nav {
   position: relative;
   display: flex;
   width: 10vw;
-  min-width: 100px;
-  min-height: 200px;
+  min-width: 120px;
+  min-height: 250px;
   height: 20vw;
   margin: 10px;
   padding-top: 10px;
@@ -703,7 +704,7 @@ a {
     font-weight: bold;
   }
   #product-container {
-    padding-top: 50px;
+    padding: 50px 10px 0 10px;
     border: 1px solid blue;
   }
   .product-box {
