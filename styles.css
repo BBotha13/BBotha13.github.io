@@ -7,9 +7,13 @@ body {
   position: relative;
   /* display: flex; */
   /* flex-direction: column; */
-  height: 100vh;
+  /* height: 100vh */
   width: 100vw;
+  /* min-height: 150%; */
   background-color: white;
+  margin: 0;
+  padding: 0;
+  /* clear: both; */
 }
 /***** navigation start *****/
 nav {
@@ -255,12 +259,10 @@ nav {
 #shop-container {
   position: relative;
   display: flex;
-  flex-direction: row;
   width: 100vw;
-  min-height: 100%;
-  /* align-content: space-around; */
+  /* height: 100vh; */
   justify-content: center;
-  padding: 100px 20px 0px 20px;
+  padding: 100px 20px 20px 20px;
 }
 #category-container {
   position: relative;
@@ -268,16 +270,18 @@ nav {
   flex-direction: column;
   align-items: center;
   width: 20%;
-  /* height: auto; */
+  /* height: 80%; */
+  margin-bottom: 100vh;
   border-radius: 5px;
+  cursor: pointer;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.616);
   background-image: url(/images/ricepaper.png);
-  /* border: 2px solid black; */
 }
 #category-container h4 {
   font-size: 1.5vw;
 }
 #category-container .category-list ul {
+  display: block;
   text-align: left;
   padding: 10px 20px;
 }
@@ -302,7 +306,7 @@ nav {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  padding: 0px 100px;
+  padding: 0px 100px 100px 100px;
   margin-right: 0px;
 }
 #product-container h3 {
@@ -548,15 +552,14 @@ textarea.input {
 
 /**************** footer******************/
 .footer {
-  position: relative;
+  position: absolute;
   display: flex;
   width: 100vw;
   justify-content: space-evenly;
   align-items: center;
-  padding: 2vh 0;
+  padding: 10px 0;
   bottom: 0px;
   background-color: rgb(173, 158, 158);
-  /* z-index: 9999; */
 }
 
 .footer a {
@@ -580,7 +583,7 @@ a {
 
 @media screen and (max-width: 850px) {
   .hamburger {
-    display: block;
+    display: none;
   }
   .hamburger.active .bar:nth-child(2) {
     opacity: 0;
@@ -599,7 +602,7 @@ a {
   }
   .nav-Menu {
     position: fixed;
-    left: -100%;
+    left: -150%;
     top: 80px;
     gap: 0;
     flex-direction: column;
@@ -676,17 +679,21 @@ a {
   }
   #shop-container {
     flex-direction: column;
-    padding: 80px 20px 0px 20px;
     justify-content: flex-start;
     align-items: center;
+    /* border: 10px solid rgb(0, 0, 0); */
   }
   #category-container {
-    width: 50%;
-    margin-top: 10px;
-    justify-content: center;
-    z-index: 2;
+    position: absolute;
+    width: 100%;
+    margin-bottom: 10px;
+    z-index: 9999;
+    /* border: 10px solid blue; */
   }
-  #category-container .category-list ul {
+  #category-container h4 {
+    font-size: 3vw;
+  }
+  .category-list.active {
     display: none;
   }
   #category-container .category-list a {
@@ -696,12 +703,8 @@ a {
     font-weight: bold;
   }
   #product-container {
-    position: absolute;
-    justify-content: center;
-    width: 100%;
-    padding: 5px;
-    margin-top: 50px;
-    z-index: 1;
+    padding-top: 50px;
+    border: 1px solid blue;
   }
   .product-box {
     position: relative;
@@ -721,8 +724,10 @@ a {
     grid-template-columns: 1fr;
   }
   .footer {
+    position: relative;
     display: block;
     text-align: center;
+    bottom: 0;
   }
   .footer p:nth-child(even) {
     display: none;
@@ -738,6 +743,10 @@ a {
   .latest-images {
     grid-template-columns: 1fr 1fr;
   }
+  .category-list.active {
+    display: none;
+    z-index: 9999;
+  }
 }
 @media screen and (max-width: 480px) {
   .logo-image {
@@ -750,13 +759,23 @@ a {
     top: 15%;
     right: 5%;
   }
-  #product-container {
-    position: absolute;
-    justify-content: center;
-    width: 100%;
-    padding: 5px;
-    margin-top: 50px;
-    z-index: 1;
+  #category-container h4 {
+    font-size: 4vw;
+  }
+  /* .category-list.active {
+    display: none;
+  } */
+  #shop-container {
+    flex-direction: column;
+    padding: 80px 20px 0px 20px;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .product-box {
+    position: relative;
+    display: flex;
+    justify-items: center;
+    margin: 2px;
   }
   .contact-container {
     padding: 10rem 0.5rem 1rem 1rem;

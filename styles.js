@@ -21,11 +21,23 @@ hamburger.addEventListener("click", () => {
 //shop category list
 
 const categoryBtn = document.querySelector("#category-container");
-const isCatActive = document.querySelector(".category-list ul");
+const isCatActive = document.querySelector(".category-list");
 
 categoryBtn.addEventListener("mouseover", () => {
-  isCatActive.style.display = "block";
+  if (window.innerWidth <= 850) {
+    if (isCatActive.classList.contains("active")) {
+      isCatActive.classList.remove("active");
+    } else {
+      isCatActive.classList.add("active");
+    }
+  }
 });
 categoryBtn.addEventListener("mouseout", () => {
-  isCatActive.style.display = "none";
+  if (window.innerWidth <= 850) {
+    if (isCatActive.classList.contains("active")) {
+      isCatActive.classList.remove("active");
+    } else {
+      isCatActive.classList.add("active");
+    }
+  }
 });
