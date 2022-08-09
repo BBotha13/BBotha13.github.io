@@ -172,22 +172,23 @@ nav {
 .latest-images {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
   align-items: center;
   justify-items: center;
-  margin-top: 1vh;
-  padding-bottom: 50px;
+  padding-bottom: 100px;
+  padding-top: 20px;
+  width: 100%;
+  background-color: pink;
 }
 .latest-product-box {
   position: relative;
   display: flex;
-  width: 20vw;
-  min-width: 165px;
-  min-height: 260px;
-  height: calc(20vw * 1.8);
-  margin: 10px;
-  padding-top: 5px;
-  text-align: center;
-  justify-content: center;
+  flex-direction: column;
+  /* padding: 5px; */
+  width: 70%;
+  height: 99%;
+  /* margin: 5px; */
+  align-items: center;
   border-radius: 7px;
   cursor: pointer;
   border: 1px solid rgb(216, 205, 205);
@@ -197,25 +198,21 @@ nav {
 }
 .img-container {
   position: relative;
-  display: flex;
-  align-items: flex-start;
-  width: 100%;
-
-  /* height: 300px; */
-  /* margin: 5px; */
-  /* padding: 10px; */
-  justify-content: center;
-  /* background-color: rgb(240, 233, 233); */
+  width: 80%;
+  height: 80%;
+  text-align: center;
 }
-.latest-images img {
-  position: absolute;
-  display: flexbox;
-  width: 90%;
+.first-images img {
+  position: relative;
+  width: 70%;
   height: auto;
-  margin: 5px;
-  justify-content: center;
-  align-items: center;
   cursor: pointer;
+}
+
+.latest-img-description {
+  position: relative;
+  width: 80%;
+  text-align: center;
 }
 
 /***** lastest products end *****/
@@ -345,7 +342,7 @@ nav {
   width: 100%;
   bottom: 0px;
 }
-.img-description hr {
+.latest-img-description hr {
   border: 1px solid rgba(207, 196, 196, 0.973);
   width: 80%;
   margin: 5px auto;
@@ -650,12 +647,18 @@ a {
     font-size: 14px;
   }
   .latest-images {
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    padding-bottom: 100px;
+    padding-top: 20px;
+    /* min-width: 100vh; */
   }
   .img-container {
     min-width: 165px;
   }
-  .latest-images img {
+  .first-images {
     width: 80%;
   }
   .about-container h1 {
