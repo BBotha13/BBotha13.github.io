@@ -561,7 +561,7 @@ textarea.input {
   border-radius: 5px;
 }
 .main-img img {
-  width: 70%;
+  width: 50%;
 }
 .small-group {
   position: relative;
@@ -585,7 +585,7 @@ textarea.input {
 .detail-info {
   position: relative;
   width: 30%;
-  height: 60%;
+  height: 64%;
   background-color: #0000001f;
   text-align: center;
   border-radius: 5px;
