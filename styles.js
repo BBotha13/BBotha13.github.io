@@ -17,23 +17,6 @@ hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");
   navMenu.classList.toggle("active");
 });
-//aaaaaaaaaaaaaaaaaaaaaaaa
-const mainImg = document.getElementById("mainImage");
-const smallImg = document.getElementsByClassName("small-img");
-
-smallImg[0].onclick = function () {
-  mainImg.src = smallImg[0].src;
-};
-smallImg[1].onclick = function () {
-  mainImg.src = smallImg[1].src;
-};
-smallImg[2].onclick = function () {
-  mainImg.src = smallImg[2].src;
-};
-smallImg[3].onclick = function () {
-  mainImg.src = smallImg[3].src;
-};
-//aaaaaaaaaaaaaaaaaaaaaaaa
 // shop category list
 
 const categoryBtn = document.querySelector("#category-container");
@@ -57,3 +40,20 @@ categoryBtn.addEventListener("mouseout", () => {
     }
   }
 });
+//aaaaaaaaaaaaaaaaaaaaaaaa
+const mainImg = document.getElementById("mainImage");
+const smallImg = document.getElementsByClassName("small-img");
+
+smallImg[0].onclick = function () {
+  mainImg.src = smallImg[0].src;
+};
+smallImg[1].onclick = function () {
+  mainImg.src = smallImg[1].src;
+};
+smallImg[2].onclick = function () {
+  mainImg.src = smallImg[2].src;
+};
+smallImg[3].onclick = function () {
+  mainImg.src = smallImg[3].src;
+};
+//aaaaaaaaaaaaaaaaaaaaaaaa
