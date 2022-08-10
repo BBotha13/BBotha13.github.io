@@ -29,7 +29,7 @@ nav {
 }
 .whatsapp-link {
   position: fixed;
-  top: 20vh;
+  top: 10vh;
   right: 0%;
 }
 .whatsapp-icon {
@@ -563,8 +563,61 @@ a {
   margin: 0;
   font-size: 1em;
 }
+/**************** product details *****************/
+.details-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  padding: 150px 0px 0px 0px;
+  background-image: url(/images/ricepaper.png);
+}
+.detail-img {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  background-color: rgb(214, 228, 222);
+  text-align: center;
+  padding: 5px;
+}
+.main-img img {
+  width: 50%;
+}
+.small-group {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  justify-content: space-around;
+  padding-top: 5px;
+  bottom: 20px;
+}
+.small-img {
+  width: 100px;
+}
+.detail-info {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+}
+.detail-info h5 {
+  text-align: left;
+  margin: 5px;
+}
+.detail-info-content {
+  padding-top: 50px;
+}
+.detail-info-footer {
+  position: absolute;
+  width: 100%;
+  bottom: 10px;
+}
 
-/**************** mobile setings******************/
+/**************** mobile setings  *****************/
 
 @media screen and (max-width: 850px) {
   .hamburger {
@@ -738,7 +791,7 @@ a {
   .latest-product-box {
     padding: 2px;
     width: 150px;
-    height: 250px;
+    height: 200px;
   }
   /* .img-container {
     position: relative;
@@ -760,7 +813,7 @@ a {
   }
   .latest-img-description p,
   h4 {
-    font-size: 5px;
+    font-size: 10px;
     margin: 5px 0 5px 0;
   }
   #shop-container {
