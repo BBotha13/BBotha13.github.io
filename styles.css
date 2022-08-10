@@ -535,6 +535,75 @@ textarea.input {
   color: #333;
 }
 
+/**************** product details *****************/
+.details-container {
+  position: relative;
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 150px;
+  background-image: url(/images/ricepaper.png);
+}
+.detail-img {
+  position: relative;
+  width: 30%;
+  height: 80%;
+  text-align: center;
+}
+.main-img {
+  position: relative;
+  height: 80%;
+  width: 100%;
+  padding-top: 20px;
+  background-color: #0000001f;
+  border-radius: 5px;
+}
+.main-img img {
+  width: 70%;
+}
+.small-group {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+.small-img-col {
+  width: 23%;
+  padding: 10px;
+  background-color: #0000001f;
+  border-radius: 5px;
+}
+
+.small-img {
+  width: 100%;
+}
+.detail-info {
+  position: relative;
+  width: 30%;
+  height: 64%;
+  background-color: #0000001f;
+  text-align: center;
+  border-radius: 5px;
+}
+.detail-info h5 {
+  text-align: left;
+  margin: 5px;
+}
+.detail-info-content {
+  width: 80%;
+  margin: 20% auto;
+}
+.detail-info-footer {
+  position: absolute;
+  width: 100%;
+  /* bottom: 10px; */
+}
+
 /**************** footer******************/
 .footer {
   position: absolute;
@@ -563,60 +632,6 @@ a {
   margin: 0;
   font-size: 1em;
 }
-/**************** product details *****************/
-.details-container {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  width: 100vw;
-  height: 100vh;
-  padding: 150px 0px 0px 0px;
-  background-image: url(/images/ricepaper.png);
-}
-.detail-img {
-  position: relative;
-  width: 500px;
-  height: 500px;
-  background-color: rgb(214, 228, 222);
-  text-align: center;
-  padding: 5px;
-}
-.main-img img {
-  width: 50%;
-}
-.small-group {
-  position: absolute;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  width: 100%;
-  justify-content: space-around;
-  padding-top: 5px;
-  bottom: 20px;
-}
-.small-img {
-  width: 100px;
-}
-.detail-info {
-  position: relative;
-  width: 500px;
-  height: 500px;
-  background-color: rgb(255, 255, 255);
-  text-align: center;
-}
-.detail-info h5 {
-  text-align: left;
-  margin: 5px;
-}
-.detail-info-content {
-  padding-top: 50px;
-}
-.detail-info-footer {
-  position: absolute;
-  width: 100%;
-  bottom: 10px;
-}
-
 /**************** mobile setings  *****************/
 
 @media screen and (max-width: 850px) {
@@ -745,6 +760,34 @@ a {
   .contact-container {
     padding: 10rem 0rem 0rem 0rem;
   }
+  .details-container {
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 150px;
+    background-image: url(/images/ricepaper.png);
+  }
+  .detail-img {
+    width: 70%;
+    height: 100%;
+    text-align: center;
+  }
+  .main-img {
+    padding-top: 20px;
+  }
+  .main-img img {
+    width: 45%;
+  }
+  .detail-info {
+    width: 70%;
+    height: 50%;
+    margin: 20px 0;
+  }
+  .detail-info-content {
+    width: 50%;
+    margin: 0px auto;
+  }
   .form {
     grid-template-columns: 1fr;
   }
@@ -768,6 +811,26 @@ a {
   .category-list.active {
     display: none;
     z-index: 9999;
+  }
+  .details-container {
+    height: 100vh;
+    padding-top: 100px;
+  }
+  .detail-img {
+    width: 70%;
+    height: 100%;
+  }
+  .main-img img {
+    width: 50%;
+  }
+  .detail-info {
+    width: 70%;
+    height: 70%;
+    margin: 20px 0;
+  }
+  .detail-info-content {
+    width: 80%;
+    margin: 0px auto;
   }
 }
 @media screen and (max-width: 480px) {
@@ -793,12 +856,6 @@ a {
     width: 150px;
     height: 200px;
   }
-  /* .img-container {
-    position: relative;
-    width: 80%;
-    height: 80%;
-    text-align: center;
-  } */
   .first-images img {
     position: relative;
     width: 90%;
@@ -874,5 +931,33 @@ a {
 
   .btn {
     padding: 0.45rem 1.2rem;
+  }
+  .detail-img {
+    width: 80%;
+    height: 70%;
+  }
+  .main-img {
+    padding: 20px 0;
+    height: 100%;
+  }
+  .main-img img {
+    width: 75%;
+  }
+  .small-group {
+    width: 100%;
+    /* justify-content: space-around; */
+  }
+  .small-img-col {
+    width: 40%;
+    padding: 3px;
+    margin: 10px;
+    background-color: #0000001f;
+    border-radius: 5px;
+  }
+  .small-img {
+    width: 70%;
+  }
+  .detail-info {
+    margin-top: 300px;
   }
 }
