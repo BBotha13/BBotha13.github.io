@@ -564,7 +564,7 @@ textarea.input {
   width: 70%;
 }
 .small-group {
-  position: absolute;
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -585,7 +585,7 @@ textarea.input {
 .detail-info {
   position: relative;
   width: 30%;
-  height: 64%;
+  height: 60%;
   background-color: #0000001f;
   text-align: center;
   border-radius: 5px;
@@ -599,7 +599,7 @@ textarea.input {
   margin: 20% auto;
 }
 .detail-info-footer {
-  position: absolute;
+  position: relative;
   width: 100%;
   /* bottom: 10px; */
 }
@@ -764,7 +764,7 @@ a {
     flex-direction: column;
     align-items: center;
     width: 100vw;
-    height: 100vh;
+    height: auto;
     padding-top: 150px;
     background-image: url(/images/ricepaper.png);
   }
@@ -778,6 +778,15 @@ a {
   }
   .main-img img {
     width: 45%;
+  }
+  .small-group {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 10px;
   }
   .detail-info {
     width: 70%;
@@ -813,7 +822,6 @@ a {
     z-index: 9999;
   }
   .details-container {
-    height: 100vh;
     padding-top: 100px;
   }
   .detail-img {
@@ -826,7 +834,8 @@ a {
   .detail-info {
     width: 70%;
     height: 70%;
-    margin: 20px 0;
+    margin: 10px 0;
+    padding: 10px 0px;
   }
   .detail-info-content {
     width: 80%;
@@ -945,7 +954,6 @@ a {
   }
   .small-group {
     width: 100%;
-    /* justify-content: space-around; */
   }
   .small-img-col {
     width: 40%;
@@ -958,6 +966,6 @@ a {
     width: 70%;
   }
   .detail-info {
-    margin-top: 300px;
+    padding-top: 0px;
   }
 }
